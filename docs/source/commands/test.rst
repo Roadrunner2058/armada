@@ -28,6 +28,7 @@ Commands
       --release TEXT         helm release
       --tiller-host TEXT     Tiller Host IP
       --tiller-port INTEGER  Tiller host Port
+      --output               Display the pod(s) output.
       --help                 Show this message and exit.
 
 
