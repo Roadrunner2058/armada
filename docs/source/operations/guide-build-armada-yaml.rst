@@ -109,6 +109,8 @@ Chart
 +-----------------+----------+---------------------------------------------------------------------------------------+
 | timeout         | int      | time (in seconds) allotted for chart to deploy when 'wait' flag is set (DEPRICATED)   |
 +-----------------+----------+---------------------------------------------------------------------------------------+
+| output          | bool     | output the pod log(s) to INFO                                                         |
++-----------------+----------+---------------------------------------------------------------------------------------+
 
 Update - Pre or Post
 ^^^^^^^^^^^^^^^^^^^^
@@ -179,6 +181,9 @@ Example
         timeout: 100
         labels:
          component: blog
+      test:
+        enabled: False
+        output: False
       install:
         no_hook: false
       upgrade:
@@ -203,6 +208,9 @@ Example
       namespace: default
       wait:
         timeout: 100
+      test:
+        enabled: True
+        output: False
       install:
         no_hook: false
       upgrade:
@@ -227,6 +235,9 @@ Example
       namespace: default
       wait:
         timeout: 100
+      test:
+        enabled: True
+        output: True
       install:
         no_hook: false
       upgrade:
